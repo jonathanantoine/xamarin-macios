@@ -5,7 +5,7 @@ PREFIX=$(abspath $(IOS_DESTDIR)/$(MONOTOUCH_PREFIX)/)
 
 MONO_HASH:=$(shell cd $(MONO_PATH) && git rev-parse HEAD)
 MONO_FILENAME=ios-release-Darwin-$(MONO_HASH).zip
-MONO_URL=https://xamjenkinsartifact.blob.core.windows.net/mono-sdks/$(MONO_FILENAME)
+MONO_URL=https://xamjenkinsartifact.azureedge.net/mono-sdks/$(MONO_FILENAME)
 
 ifeq ($(MONO_BUILD_FROM_SOURCE),)
 SDK_BUILDDIR=$(abspath downloads/$(basename $(MONO_FILENAME)))
